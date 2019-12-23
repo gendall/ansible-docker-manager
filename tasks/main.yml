@@ -1,0 +1,13 @@
+---
+- name: Init new swarm
+  docker_swarm:
+    state: present
+    advertise_addr: "{{ inventory_hostname }}:2377"
+  register: swarm_info
+    
+- name: Store swarm info
+  add_host:
+    name: swarm_tokens
+    manager: "{{ swarm_info.swarm_facts.JoinTokens.Manager }}"
+    worker: "{{ swarm_info.swarm_facts.JoinTokens.Worker }}"
+  changed_when: false

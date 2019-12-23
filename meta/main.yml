@@ -1,0 +1,8 @@
+galaxy_info:
+  role_name: docker-manager
+  author: Rob Stanford
+  description: A role to initialise a new Docker Swarm Manager
+  company: Gendall Design
+  license: MIT
+  min_ansible_version: 1.8
+  galaxy_tags: [docker, swarm]

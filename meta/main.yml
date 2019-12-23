@@ -4,5 +4,12 @@ galaxy_info:
   description: A role to initialise a new Docker Swarm Manager
   company: Gendall Design
   license: MIT
-  min_ansible_version: 1.8
+  min_ansible_version: 2.8
+  platform:
+    - name: Ubuntu
+      versions:
+      - all
+    - name: Debian
+      versions:
+      - all
   galaxy_tags: [docker, swarm]

@@ -1,4 +1,7 @@
 ---
+- pip:
+    name: docker
+    
 - name: Init new swarm
   docker_swarm:
     state: present
